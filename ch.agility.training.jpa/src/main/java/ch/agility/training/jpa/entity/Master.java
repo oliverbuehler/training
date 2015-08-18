@@ -1,4 +1,4 @@
-package ch.agility.training.jpa;
+package ch.agility.training.jpa.entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,8 +19,22 @@ public class Master {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	private String stringAttribute;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "master")
 	private Set<Detail> detailSet = new HashSet<>();
+
+	public int getId() {
+		return id;
+	}
+
+	public String getStringAttribute() {
+		return stringAttribute;
+	}
+
+	public void setStringAttribute(String stringAttribute) {
+		this.stringAttribute = stringAttribute;
+	}
 
 	public void addDetail(Detail detail) {
 		detailSet.add(detail);

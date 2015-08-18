@@ -1,4 +1,4 @@
-package ch.agility.training.jpa;
+package ch.agility.training.jpa.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +17,10 @@ public class Detail {
 
 	@ManyToOne
 	private Master master;
+
+	public int getId() {
+		return id;
+	}
 
 	public Master getMaster() {
 		return master;

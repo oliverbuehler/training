@@ -6,6 +6,9 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>ch.agility.training.jpa.entity.Master</class>
 		<class>ch.agility.training.jpa.entity.Detail</class>
+		
+		<shared-cache-mode>ALL</shared-cache-mode>
+		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test" />
@@ -22,6 +25,5 @@
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.default_schema" value="jpa" />
 		</properties>
-
 	</persistence-unit>
 </persistence>

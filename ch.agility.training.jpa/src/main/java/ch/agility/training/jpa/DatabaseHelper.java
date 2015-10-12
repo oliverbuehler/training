@@ -31,17 +31,17 @@ public class DatabaseHelper {
 		JdbcDataSource h2dataSource = new JdbcDataSource();
 		switch (databaseMode) {
 		case MEMORY:
-			h2dataSource.setUrl("jdbc:h2:mem:test");
+			h2dataSource.setURL("jdbc:h2:mem:test");
 			break;
 		case EMBEDDED:
-			h2dataSource.setUrl("jdbc:h2:/D:/Daten/H2/test");
+			h2dataSource.setURL("jdbc:h2:/D:/Daten/H2/test");
 			h2dataSource.setUser("sa");
 			h2dataSource.setPassword("");
 			break;
 		case SERVER:
 			// org.h2.tools.Server server = new Server();
 			// Server.createTcpServer(args)
-			h2dataSource.setUrl("jdbc:h2:tcp://localhost:9092/test");
+			h2dataSource.setURL("jdbc:h2:tcp://localhost:9092/test");
 			h2dataSource.setUser("sa");
 			h2dataSource.setPassword("");
 			break;

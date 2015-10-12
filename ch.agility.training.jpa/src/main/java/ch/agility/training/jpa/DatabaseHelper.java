@@ -31,7 +31,7 @@ public class DatabaseHelper {
 		JdbcDataSource h2dataSource = new JdbcDataSource();
 		switch (databaseMode) {
 		case MEMORY:
-			h2dataSource.setURL("jdbc:h2:mem:test");
+			h2dataSource.setURL("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1");
 			break;
 		case EMBEDDED:
 			h2dataSource.setURL("jdbc:h2:/D:/Daten/H2/test");
